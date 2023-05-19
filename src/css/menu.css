@@ -1,0 +1,39 @@
+.menu-bar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.menu-bar-nav {
+    display: flex;
+}
+
+.menu-bar-link {
+    margin-right: 100px;
+}
+
+/* Example styles for sections */
+#home {
+    height: 100vh;
+    background: #e9e9e9;
+    scroll-margin-top: 70px;
+    /* Adjust this value to match the height of the menu bar */
+}
+
+#about {
+    height: 100vh;
+    background: #f7f7f7;
+    scroll-margin-top: 70px;
+    /* Adjust this value to match the height of the menu bar */
+}
+
+#resume {
+    height: 100vh;
+    background: #e3e3e3;
+    scroll-margin-top: 70px;
+    /* Adjust this value to match the height of the menu bar */
+}
