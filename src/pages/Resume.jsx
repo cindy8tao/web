@@ -1,31 +1,21 @@
 import React from 'react';
-import {
-  Table,
-  Select
-} from 'antd'
 
-import MenuBar from '../components/Menu';
+const Resume = () => {
+  return (
+    <div>HELLO</div>
+    // <div name='resume' className='w-full h-screen bg-[#e0eff4] text-gray-600'>
+    //   {/* Container */}
+    //   <div className='max-w-[500px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
+    //     <div>
+    //       <p className='text-4xl font-bold inline border-b-4 border-[#E27D60] '>Resume</p>
+    //     </div>
 
 
-class Resume extends React.Component {
 
-  constructor(props) {
-    super(props)
-  }
 
-  render() {
+    //   </div>
+    // </div>
+  );
+};
 
-    return (
-      <div id="resume">
-        <MenuBar />
-        <div style={{ width: '70vw', margin: '0 auto', marginTop: '10vh' }}>
-          <h3>Resume</h3>
-        </div>
-      </div>
-    )
-  }
-
-}
-
-export default Resume
-
+export default Resume;
