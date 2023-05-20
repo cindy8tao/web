@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/web/static/css/main.b24fab95.css",
+    "main.js": "/web/static/js/main.a2e39eef.js",
+    "static/media/bg.jpg": "/web/static/media/bg.560e38e799908a8a535a.jpg",
+    "static/media/logo.png": "/web/static/media/logo.ed00b329bc1488e6c0ec.png",
+    "static/media/CindyResume2023.pdf": "/web/static/media/CindyResume2023.c3d70d682b30e48b13d5.pdf",
+    "index.html": "/web/index.html",
+    "main.b24fab95.css.map": "/web/static/css/main.b24fab95.css.map",
+    "main.a2e39eef.js.map": "/web/static/js/main.a2e39eef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b24fab95.css",
+    "static/js/main.a2e39eef.js"
+  ]
+}
