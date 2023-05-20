@@ -31,3 +31,13 @@
 .background {
     background-image: url('../images/bg.jpg');
 }
+
+.content-container {
+    position: relative;
+    z-index: 1;
+}
+
+.menu {
+    position: relative;
+    z-index: 10;
+}

@@ -55,7 +55,7 @@ const Menu = () => {
                 className={
                     !nav
                         ? 'hidden'
-                        : 'absolute top-0 left-0 w-full h-screen bg-[background] flex flex-col justify-center items-center'
+                        : 'absolute top-0 left-0 w-full h-screen bg-white flex flex-col justify-center items-center'
                 }
             >
                 <li className='py-6 text-4xl'>
@@ -88,7 +88,7 @@ const Menu = () => {
                 <ul className='flex space-x-3 justify-center'>
                     <li className='flex py-4 px-8 justify-between items-center'>
                         <a className='flex justify-between items-center w-full text-gray-300' href='https://www.linkedin.com/in/cindytao/'>
-                            <FaLinkedin size={30} color="blue" />
+                            <FaLinkedin size={30} color="#0077B5" />
                         </a>
                     </li>
                     <li className='flex py-4 px-8 justify-between items-center'>
@@ -104,7 +104,7 @@ const Menu = () => {
                         </a>
                     </li>
                 </ul>
-                <p className='text-center py-2 px-8 font-light text-sm'>&copy; 2023 Cindy Tao. All rights reserved.</p>
+                <p className='text-center py-2 px-8 text-[#E27D60] text-sm'>&copy; 2023 Cindy Tao. All rights reserved.</p>
             </div>
         </div>
     );

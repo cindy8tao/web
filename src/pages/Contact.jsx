@@ -23,7 +23,7 @@ const Contact = () => {
   };
 
   const handleEmailClick = () => {
-    const emailAddress = 'cindy8tao@gmail.com';
+    const emailAddress = 'cindywebsitemail@gmail.com';
     const emailSubject = encodeURIComponent(subject);
     const emailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
     const mailtoLink = `mailto:${emailAddress}?subject=${emailSubject}&body=${emailBody}`;
