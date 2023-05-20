@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.ea3ea6ef.css",
-    "main.js": "/web/static/js/main.ea01fe43.js",
+    "main.css": "/web/static/css/main.81feea4a.css",
+    "main.js": "/web/static/js/main.8646274e.js",
     "static/media/bg.jpg": "/web/static/media/bg.560e38e799908a8a535a.jpg",
     "static/media/logo.png": "/web/static/media/logo.ed00b329bc1488e6c0ec.png",
+    "static/media/CindyResume2023.pdf": "/web/static/media/CindyResume2023.c3d70d682b30e48b13d5.pdf",
     "index.html": "/web/index.html",
-    "main.ea3ea6ef.css.map": "/web/static/css/main.ea3ea6ef.css.map",
-    "main.ea01fe43.js.map": "/web/static/js/main.ea01fe43.js.map"
+    "main.81feea4a.css.map": "/web/static/css/main.81feea4a.css.map",
+    "main.8646274e.js.map": "/web/static/js/main.8646274e.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea3ea6ef.css",
-    "static/js/main.ea01fe43.js"
+    "static/css/main.81feea4a.css",
+    "static/js/main.8646274e.js"
   ]
 }
