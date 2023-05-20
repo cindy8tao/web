@@ -14,7 +14,7 @@ const Menu = () => {
     const handleClick = () => setNav(!nav);
 
     return (
-        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[background] text-[#5085A5] font-bold'>
+        <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-white text-[#5085A5] font-bold'>
             <div>
                 <a href="/web">
                     <img src={Logo} alt='My Icon' style={{ width: '70px' }} />
@@ -83,7 +83,7 @@ const Menu = () => {
                 </li>
             </ul>
 
-            <div className='fixed inset-x-0 bottom-0 h-[100px] lg:flex flex-col bg-[background]'>
+            <div className='fixed inset-x-0 bottom-0 h-[100px] lg:flex flex-col bg-white'>
                 {/* Content of the footer */}
                 <ul className='flex space-x-3 justify-center'>
                     <li className='flex py-4 px-8 justify-between items-center'>
