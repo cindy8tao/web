@@ -40,12 +40,11 @@ const Journey = () => {
     ];
 
     return (
-        <div name="journey" className="w-full h-screen bg-[#d7f1ff] text-gray-600">
+        <div name="journey" className={`w-full h-[150vh] bg-[#d7f1ff] text-gray-600`}>
             <div className="max-w-[500px] mx-auto p-4 flex flex-col justify-center w-full h-full">
                 <div>
                     <p className="text-4xl font-bold inline border-b-4 border-[#E27D60]">Timeline</p>
                 </div>
-
                 <VerticalTimeline>
                     {timelineItems.map((item, index) => {
                         const isEvenIndex = index % 2 === 0;

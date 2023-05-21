@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <div name='contact' className='w-full h-screen bg-[#d7f1ff] text-gray-600'>
+    <div name='contact' className='w-full h-[150vh] bg-[#d7f1ff] text-gray-600'>
       {/* Container */}
       <div className='max-w-[500px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div>
