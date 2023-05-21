@@ -1,6 +1,14 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
+import { animateScroll as scroll } from 'react-scroll';
+import { HiArrowUp } from 'react-icons/hi';
 
+const scrollToTop = () => {
+    scroll.scrollToTop({
+        smooth: true,
+        duration: 1000, // Adjust the duration to control the scrolling speed
+    });
+};
 const HomePageMobile = () => {
     return (
         <div name='home' className='w-full h-screen background'>
@@ -29,6 +37,11 @@ const HomePageMobile = () => {
                         </p>
                     </div>
                 </div>
+            </div>
+            <div className="fixed bottom-28 right-10">
+                <button onClick={scrollToTop}>
+                    <HiArrowUp className="ml-3" style={{ fontSize: '24px' }} />
+                </button>
             </div>
         </div>
     );

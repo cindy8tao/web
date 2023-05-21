@@ -1,13 +1,11 @@
-import React from 'react';
-import { Card, Button } from 'antd';
+import React, { useState, useEffect } from 'react';
+import { Button } from 'antd';
 import { FaGithub, FaSistrix } from 'react-icons/fa';
 import proj1 from '../images/proj1.png';
 import proj2 from '../images/proj2.png';
 import ProjectsMobile from '../mobile/ProjectsMobile';
-import { useState, useEffect } from 'react';
 
 const Projects = () => {
-  // Sample project data
   const projects = [
     {
       id: 1,
@@ -25,72 +23,82 @@ const Projects = () => {
       demoLink: 'https://www.youtube.com/watch?v=dNsTBXaz1tE&ab_channel=CindyTao',
       githubLink: 'https://github.com/cindy8tao/CIS550',
     },
-    // Add more projects as needed
   ];
 
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1025);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const handleResize = () => {
-      console.log(window.innerWidth);
       setIsMobile(window.innerWidth <= 1025);
     };
 
     window.addEventListener('resize', handleResize);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
   if (isMobile) {
-    return (
-      <ProjectsMobile />
-    );
+    return <ProjectsMobile />;
   }
 
   return (
-    <div name='projects' className='w-full h-screen bg-[#d7f1ff] text-gray-600'>
-      {/* Container */}
-      <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
+    <div name="projects" className="w-full h-screen bg-[#d7f1ff] text-gray-600">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div>
-          <p className='text-4xl font-bold inline border-b-4 border-[#E27D60]'>Projects</p>
+          <p className="text-4xl font-bold inline border-b-4 border-[#E27D60]">Projects</p>
         </div>
-        <div className='grid grid-cols-2 gap-4 mt-8'>
-          {projects.map((project) => (
-            <Card
-              key={project.id}
-              cover={<img alt={project.name} src={project.image} className='project-image' />}
-              className='border border-gray-300 rounded-lg shadow-md'
-              bodyStyle={{ height: '400px' }}
-            >
-              <div className='flex flex-col justify-between h-full p-4'>
-                <div>
-                  <h2 className='text-lg font-bold mb-4'>{project.name}</h2>
-                  <p className='overflow-hidden text-ellipsis'>{project.description}</p>
-                </div>
-                <div className='flex justify-end'>
-                  <Button
-                    href={project.demoLink}
-                    target='_blank'
-                    className='mr-2 text-black group border-2 px-6 py-3 flex items-center justify-center w-[50%] rounded-full hover:bg-[#E27D60] hover:border-[#E27D60]'
-                    type='primary'
-                    icon={<FaSistrix size={30} color='black' />}
-                  >
-                    Demo
-                  </Button>
-                  <Button
-                    href={project.githubLink}
-                    target='_blank'
-                    className='text-black group border-2 px-6 py-3 flex items-center justify-center w-[50%] rounded-full hover:bg-[#E27D60] hover:border-[#E27D60]'
-                    type='primary'
-                    icon={<FaGithub size={30} color='black' />}
-                  >
-                    GitHub
-                  </Button>
+        <div className="mt-8 grid grid-cols-2 gap-4">
+          {projects.map((project, index) => {
+            const isVisible = index >= activeIndex * 2 && index < activeIndex * 2 + 2;
+
+            return (
+              <div
+                key={project.id}
+                className={`${isVisible ? 'block' : 'hidden'
+                  } border border-gray-300 rounded-lg shadow-md`}
+              >
+                <div className="flex flex-col justify-between h-full p-4">
+                  <img alt={project.name} src={project.image} className="project-image" />
+                  <div>
+                    <h2 className="text-lg font-bold mb-4">{project.name}</h2>
+                    <p className="overflow-hidden text-ellipsis">{project.description}</p>
+                  </div>
+                  <div className="flex justify-end">
+                    <Button
+                      href={project.demoLink}
+                      target="_blank"
+                      className="mr-2 text-black group border-2 px-6 py-3 flex items-center justify-center w-[50%] rounded-full hover:bg-[#E27D60] hover:border-[#E27D60]"
+                      type="primary"
+                      icon={<FaSistrix size={30} color="black" />}
+                    >
+                      Demo
+                    </Button>
+                    <Button
+                      href={project.githubLink}
+                      target="_blank"
+                      className="text-black group border-2 px-6 py-3 flex items-center justify-center w-[50%] rounded-full hover:bg-[#E27D60] hover:border-[#E27D60]"
+                      type="primary"
+                      icon={<FaGithub size={30} color="black" />}
+                    >
+                      GitHub
+                    </Button>
+                  </div>
                 </div>
               </div>
-            </Card>
+            );
+          })}
+        </div>
+        <div className="flex justify-center mt-4">
+          {projects.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => setActiveIndex(index)}
+              className={`${index === activeIndex ? 'bg-[#E27D60]' : 'bg-[#C0CCDA]'
+                } w-4 h-4 rounded-full mx-1 cursor-pointer`}
+            ></div>
           ))}
         </div>
       </div>
