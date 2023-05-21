@@ -3,7 +3,7 @@ import React from 'react';
 const Resume = () => {
   return (
     <div>HELLO</div>
-    // <div name='resume' className='w-full h-screen bg-[#e0eff4] text-gray-600'>
+    // <div name='resume' className='w-full h-screen bg-[#d7f1ff] text-gray-600'>
     //   {/* Container */}
     //   <div className='max-w-[500px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
     //     <div>

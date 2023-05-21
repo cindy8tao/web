@@ -1,13 +1,12 @@
 import React from 'react';
-import { Card, Button } from 'antd';
+import { Button } from 'antd';
 import { FaGithub, FaSistrix } from 'react-icons/fa';
 import proj1 from '../images/proj1.png';
 import proj2 from '../images/proj2.png';
 import { useState } from 'react';
-import ProjectsMobile from '../mobile/ProjectsMobile';
 
 
-const Projects = () => {
+const ProjectsMobile = () => {
   // Sample project data
   const projects = [
     {
@@ -30,13 +29,6 @@ const Projects = () => {
   ];
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const isMobile = window.innerWidth <= 768; // Check if the window width is less than or equal to 768px
-  if (isMobile) {
-    return (
-      <ProjectsMobile />
-    );
-  }
-
   return (
     <div name='projects' className='w-full h-screen bg-[#d7f1ff] text-gray-600'>
       {/* Container */}
@@ -44,15 +36,15 @@ const Projects = () => {
         <div>
           <p className='text-4xl font-bold inline border-b-4 border-[#E27D60]'>Projects</p>
         </div>
-        <div className='grid grid-cols-2 gap-4 mt-8'>
-          {projects.map((project) => (
-            <Card
+        <div className='mt-8'>
+          {projects.map((project, index) => (
+            <div
               key={project.id}
-              cover={<img alt={project.name} src={project.image} className='project-image' />}
-              className='border border-gray-300 rounded-lg shadow-md'
-              bodyStyle={{ height: '400px' }}
+              className={`${index === activeIndex ? 'block' : 'hidden'
+                } border border-gray-300 rounded-lg shadow-md`}
             >
               <div className='flex flex-col justify-between h-full p-4'>
+                <img alt={project.name} src={project.image} className='project-image' />
                 <div>
                   <h2 className='text-lg font-bold mb-4'>{project.name}</h2>
                   <p className='overflow-hidden text-ellipsis'>{project.description}</p>
@@ -78,7 +70,17 @@ const Projects = () => {
                   </Button>
                 </div>
               </div>
-            </Card>
+            </div>
+          ))}
+        </div>
+        <div className='flex justify-center mt-4'>
+          {projects.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => setActiveIndex(index)}
+              className={`${index === activeIndex ? 'bg-[#E27D60]' : 'bg-[#C0CCDA]'
+                } w-4 h-4 rounded-full mx-1 cursor-pointer`}
+            ></div>
           ))}
         </div>
       </div>
@@ -86,4 +88,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsMobile;
