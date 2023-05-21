@@ -4,7 +4,7 @@ import { FaGithub, FaSistrix } from 'react-icons/fa';
 import proj1 from '../images/proj1.png';
 import proj2 from '../images/proj2.png';
 import ProjectsMobile from '../mobile/ProjectsMobile';
-
+import { useState, useEffect } from 'react';
 
 const Projects = () => {
   // Sample project data
@@ -28,7 +28,21 @@ const Projects = () => {
     // Add more projects as needed
   ];
 
-  const isMobile = window.innerWidth <= 768; // Check if the window width is less than or equal to 768px
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1025);
+
+  useEffect(() => {
+    const handleResize = () => {
+      console.log(window.innerWidth);
+      setIsMobile(window.innerWidth <= 1025);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   if (isMobile) {
     return (
       <ProjectsMobile />

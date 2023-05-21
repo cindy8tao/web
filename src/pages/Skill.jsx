@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 
 import {
     DiJava,
@@ -13,7 +14,21 @@ import {
 import SkillsMobile from '../mobile/SkillsMobile';
 
 const Skills = () => {
-    const isMobile = window.innerWidth <= 768; // Check if the window width is less than or equal to 768px
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1025);
+
+    useEffect(() => {
+        const handleResize = () => {
+            console.log(window.innerWidth);
+            setIsMobile(window.innerWidth <= 1025);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     if (isMobile) {
         return (
             <SkillsMobile />
