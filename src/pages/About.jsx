@@ -1,4 +1,3 @@
-import { Divider, Space } from 'antd';
 import React from 'react';
 import AboutMobile from '../mobile/AboutMobile';
 

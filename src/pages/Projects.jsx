@@ -3,7 +3,6 @@ import { Card, Button } from 'antd';
 import { FaGithub, FaSistrix } from 'react-icons/fa';
 import proj1 from '../images/proj1.png';
 import proj2 from '../images/proj2.png';
-import { useState } from 'react';
 import ProjectsMobile from '../mobile/ProjectsMobile';
 
 
@@ -28,7 +27,6 @@ const Projects = () => {
     },
     // Add more projects as needed
   ];
-  const [activeIndex, setActiveIndex] = useState(0);
 
   const isMobile = window.innerWidth <= 768; // Check if the window width is less than or equal to 768px
   if (isMobile) {
