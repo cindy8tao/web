@@ -56,43 +56,41 @@ const Menu = () => {
             </div>
 
             {/* Mobile menu */}
-            <ul
+            <div
                 className={
                     !nav
                         ? 'hidden'
-                        : 'absolute top-0 left-0 w-full h-[150vh] bg-white flex flex-col justify-center items-center'
+                        : 'fixed top-0 left-0 w-full h-[100vh] bg-white flex flex-col justify-center items-center overflow-y-scroll'
                 }
             >
-                <li className='py-6 text-4xl'>
-                    <Link onClick={handleClick} to='home' smooth={true} duration={500}>
-                        Home
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    {' '}
-                    <Link onClick={handleClick} to='about' smooth={true} duration={500}>
-                        About
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    {' '}
-                    <Link onClick={handleClick} to='skills' smooth={true} duration={500}>
-                        Skills
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    {' '}
-                    <Link onClick={handleClick} to='projects' smooth={true} duration={500}>
-                        Projects
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    {' '}
-                    <Link onClick={handleClick} to='journey' smooth={true} duration={500}>
-                        Timeline
-                    </Link>
-                </li>
-            </ul>
+                <ul>
+                    <li className='py-6 text-4xl'>
+                        <Link onClick={handleClick} to='home' smooth={true} duration={500}>
+                            Home
+                        </Link>
+                    </li>
+                    <li className='py-6 text-4xl'>
+                        <Link onClick={handleClick} to='about' smooth={true} duration={500}>
+                            About
+                        </Link>
+                    </li>
+                    <li className='py-6 text-4xl'>
+                        <Link onClick={handleClick} to='skills' smooth={true} duration={500}>
+                            Skills
+                        </Link>
+                    </li>
+                    <li className='py-6 text-4xl'>
+                        <Link onClick={handleClick} to='projects' smooth={true} duration={500}>
+                            Projects
+                        </Link>
+                    </li>
+                    <li className='py-6 text-4xl'>
+                        <Link onClick={handleClick} to='journey' smooth={true} duration={500}>
+                            Timeline
+                        </Link>
+                    </li>
+                </ul>
+            </div>
 
             <div className='fixed inset-x-0 bottom-0 h-[100px] lg:flex flex-col bg-white'>
                 {/* Content of the footer */}
