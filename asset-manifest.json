@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/web/static/css/main.a03a550b.css",
-    "main.js": "/web/static/js/main.f36a5eaf.js",
+    "main.js": "/web/static/js/main.85d7f948.js",
     "static/media/proj2.png": "/web/static/media/proj2.a151309200cdfce2144b.png",
     "static/media/proj1.png": "/web/static/media/proj1.d7216767b84fd6f772b0.png",
     "static/media/self1.png": "/web/static/media/self1.0224514f0a6a63f10a97.png",
     "static/media/logo.png": "/web/static/media/logo.ed00b329bc1488e6c0ec.png",
-    "static/media/CindyResume2023.pdf": "/web/static/media/CindyResume2023.c3d70d682b30e48b13d5.pdf",
+    "static/media/CindyResume2023.pdf": "/web/static/media/CindyResume2023.f1d85f5b604617bafe7f.pdf",
     "index.html": "/web/index.html",
     "main.a03a550b.css.map": "/web/static/css/main.a03a550b.css.map",
-    "main.f36a5eaf.js.map": "/web/static/js/main.f36a5eaf.js.map"
+    "main.85d7f948.js.map": "/web/static/js/main.85d7f948.js.map"
   },
   "entrypoints": [
     "static/css/main.a03a550b.css",
-    "static/js/main.f36a5eaf.js"
+    "static/js/main.85d7f948.js"
   ]
 }
